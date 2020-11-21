@@ -1,0 +1,83 @@
+@import 'config';
+
+// CUSTOM USER STYLES & IMPORTS
+
+$tablet-width: 768px;
+$desktop-width: 1088px;
+
+.container{
+	width: 280px;
+	padding: 0 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-group{
+	display: block;
+	width: 280px;
+	padding: 0 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin reset-list(){
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-menu,
+.social-list,
+.info-list,
+.services,
+.slider__list{
+	@include reset-list();
+}
+
+@media (min-width: $tablet-width){
+	.container{
+		width: $tablet-width;
+	}
+
+	.container-group{
+		width: $tablet-width;
+	}
+}
+
+@media(min-width: $desktop-width){
+	.container{
+		width: $desktop-width;
+	}
+
+	.container-group{
+		width: $desktop-width;
+		display: flex;
+	}
+
+	.user-block{
+		flex-basis: 300px;
+	}
+
+	.page-main{
+		flex-basis: 930px;
+	}
+
+	.resume__wrapper{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.education,
+	.experience{
+		flex-basis: 380px;
+	}
+
+	.skills__wrapper{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.skills__list{
+		flex-basis: 380px;
+	}
+}
