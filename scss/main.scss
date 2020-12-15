@@ -1,12 +1,32 @@
 @import 'config';
 
-// CUSTOM USER STYLES & IMPORTS
 
+// CUSTOM USER STYLES & IMPORTS
+$mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1088px;
+$bg-color: #302C40;
+
+$main-color: #ff6709;
+
+@import 'custom';
+@import 'menu';
+
+
+
+body{
+	background: #272333;
+	background-image: url('../images/src/icon/triangles-top.svg'), url('../images/src/icon/triangles-bottom.svg');
+	background-repeat: no-repeat;
+	background-position: left top, right bottom;
+	font-family: Akrobat-Bold, Verdana, sans-serif;
+	color: #fff;
+	font-size: 16px;
+}
 
 .container{
-	width: 280px;
+	max-width: 1240px;
+	min-width: 320px;
 	padding: 0 20px;
 	margin-left: auto;
 	margin-right: auto;
@@ -14,10 +34,19 @@ $desktop-width: 1088px;
 
 .container-group{
 	display: block;
-	width: 280px;
-	padding: 0 20px;
+	max-width: 1240px;
+	min-width: 320px;
+	padding: 0 15px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.visually-hidden{
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
 }
 
 @mixin reset-list(){
@@ -32,6 +61,13 @@ $desktop-width: 1088px;
 .services,
 .slider__list{
 	@include reset-list();
+}
+
+
+.container{
+	background-color: #302C40;
+	border-radius: 20px;
+	padding:  20px;
 }
 
 @media (min-width: $tablet-width){

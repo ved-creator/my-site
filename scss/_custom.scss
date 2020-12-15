@@ -1,0 +1,47 @@
+//fonts
+
+@font-face {
+    font-family: 'Echoes Sans';
+    src: url('../fonts/EchoesSans.woff2') format('woff2'),
+        url('../fonts/EchoesSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Akrobat';
+    src: url('../fonts/Akrobat-Bold.woff2') format('woff2'),
+        url('../fonts/Akrobat-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.title{
+	font-family: 'Echoes Sans';
+	letter-spacing: 3px;
+	color: #fff;
+
+}
+
+.title-h1{
+	font-size: 36px;
+	&:after{
+		content: '';
+		display: block;
+		width: 60px;
+		height: 5px;
+		background: linear-gradient(to left, #f46b34, #0c78a3);
+	}
+}
+
+.title-h2{
+	font-size: 28px;
+}
+
+.button{
+	
+}
